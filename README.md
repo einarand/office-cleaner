@@ -10,7 +10,7 @@ will store the result into the database.
 Office cleaner is RESTful web application written in Java on the [Spring Boot](https://spring.io/projects/spring-boot) framework. 
 The service listens to HTTP protocol on port 5000. See [API](#api) section below for details on how to use the service.
 Cleaning results are stored in a Postgres database. The defualt data database name is ```postgres```, 
-but is configurable through Environment variables
+but is configurable through [Environment](#environment) variables
 
 ## How to get started
 ### Preperations
@@ -34,7 +34,7 @@ The application is run by issuing following command.
 ```
 Note: To package the application into a war file instead of a jar file, please change the ```<packaging>``` element in the ```pom.xml``` file from ```jar``` to ```war```.
 
-## Environment variables
+## <a name="environment"></a>Environment variables
 When starting the application, it will look for a file called application.properties. 
 If it exists it will read the environment variables from there.
 It is also possible to set enviroment variables through the command line.
@@ -57,7 +57,7 @@ The API is accessable on port 5000 through two REST endpoints.
 ### Doing cleaning and creating a report
 #### Request example
 ***POST*** ```localhost:5000/tibber-developer-test/enter-path```
-headers:
+required headers:
 ```
 Content-Type: application/json
 ```
@@ -65,16 +65,16 @@ Content-Type: application/json
 request body example:
 ```
 {
-  "start":{
-		"x":5,
-		"y":2
-	},
-	"commands":[
-	  {"direction":"north","steps":2},
-    {"direction":"east","steps":3}, 
-    {"direction":"south","steps":1}, 
-    {"direction":"west","steps":5},
-	]
+   "start":{
+       "x":5,
+       "y":2
+   },
+   "commands":[
+      {"direction":"north","steps":2},
+      {"direction":"east","steps":3}, 
+      {"direction":"south","steps":1}, 
+      {"direction":"west","steps":5},
+   ]
 }
 ```
 
