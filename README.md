@@ -21,6 +21,9 @@ For Mac OSX developers these tools can easily be installed using [Homebrew](http
 ```
 Desclaimer: There may be other packages needed as well that I can't think of right now.
 
+### Create required PostgreSQL database and tables
+The postgres database and the talbe used by the application must be created manually before starting the application. The default name of the database is ```postgres```, username is ```cleaners``` and password is ```1234```, but it is possible to override this through [Environment variables](#environment). The schema is found in the ```src/main/resources/schema-postgres.sql```
+
 ### Build and run the application
 The executable jar file is built using Maven. The executable contains the application and a 
 Tomcat server where the application will be deplyed when run.
