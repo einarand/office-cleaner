@@ -36,7 +36,12 @@ Note: To package the application into a war file instead of a jar file, please c
 
 ## <a name="environment"></a>Environment variables
 When starting the application, it will look for a file called ```application.properties``` in the path from where the application is executed. If it exists the application will read the environment variables from there.
-It is also possible to set enviroment variables through the command line throug ```-D{variable}={value}``` arguments.
+It is also possible to set enviroment variables through the command line using ```-D{variable}={value}``` arguments, like this:
+
+```
+java -jar -Dspring.datasource.username="bob" -Dspring.datasource.password="pa$$word" target/office-cleaner-1.0-SNAPSHOT.jar
+```
+
 If custom environment variables are not specified, it will use default variables specified below.
 
 Default Postgres setup harcoded in the application, but this can be overridden through environment varibles (```spring.datasource``` name space).
