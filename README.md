@@ -70,7 +70,7 @@ required headers:
 Content-Type: application/json
 ```
 
-request body example:
+body:
 ```
 {
     "start":{
