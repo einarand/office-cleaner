@@ -55,7 +55,7 @@ spring.datasource.password=1234
 The API is accessable on port 5000 through two REST endpoints. 
 
 ### Doing cleaning and creating a report
-##### Request example
+#### Request example
 ***POST*** ```localhost:5000/tibber-developer-test/enter-path```
 headers:
 ```
@@ -78,15 +78,17 @@ request body example:
 }
 ```
 
-##### Response example
+#### Response example
 response code:
 ```
 201 CREATED
 ```
+
 headers:
 ```
 Location: http://localhost:5000/tibber-developer-test/enter-path/08520023-e28f-4964-84cd-af25ddc5cc3d
 ```
+
 body:
 ```
 {
@@ -99,11 +101,12 @@ body:
 ```
 
 ### Getting reports from previous cleanings
-##### Request example
+#### Request example
 ***GET*** ```localhost:5000/tibber-developer-test/enter-path/08520023-e28f-4964-84cd-af25ddc5cc3d```
-##### Response example
+#### Response example
 response code:
 ```200 OK```
+
 body:
 ```
 {
