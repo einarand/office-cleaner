@@ -16,7 +16,7 @@ Cleaning results are stored in a Postgres database.
 Make sure you have Java SDK, Maven and Postgres installed.
 For Mac OSX developers these tools can easily be installed using [Homebrew](https://brew.sh/).
 ```
-#> brew install java maven postgres
+#> brew install java maven postgresql
 ```
 Desclaimer: There may be other packages needed as well that I can't think of right now.
 
