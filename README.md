@@ -9,8 +9,7 @@ will store the result into the database.
 ### Technology
 Office cleaner is RESTful web application written in Java on the [Spring Boot](https://spring.io/projects/spring-boot) framework. 
 The service listens to HTTP protocol on port 5000. See [API](#api) section below for details on how to use the service.
-Cleaning results are stored in a Postgres database. The default data database name is ```postgres```, 
-but is configurable through [Environment](#environment) variables
+Cleaning results are stored in a Postgres database.
 
 ## How to get started
 ### Preperations
@@ -47,7 +46,7 @@ java -jar -Dspring.datasource.username="bob" -Dspring.datasource.password="pa$$w
 
 If custom environment variables are not specified, it will use default variables specified below.
 
-Default Postgres setup harcoded in the application, but this can be overridden through environment varibles (```spring.datasource``` name space).
+Default Postgres setup can be overridden through environment varibles in the ```spring.datasource.*``` name space.
 It is also possible to change the port that the web application listenes to through the variable ```server.port```.
 
 Default variables:
