@@ -9,7 +9,7 @@ will store the result into the database.
 ### Technology
 Office cleaner is RESTful web application written in Java on the [Spring Boot](https://spring.io/projects/spring-boot) framework. 
 The service listens to HTTP protocol on port 5000. See [API](#api) section below for details on how to use the service.
-Cleaning results are stored in a Postgres database. The defualt data database name is ```postgres```, 
+Cleaning results are stored in a Postgres database. The default data database name is ```postgres```, 
 but is configurable through [Environment](#environment) variables
 
 ## How to get started
@@ -35,7 +35,7 @@ The application is run by issuing following command.
 Note: To package the application into a war file instead of a jar file, please change the ```<packaging>``` element in the ```pom.xml``` file from ```jar``` to ```war```.
 
 ## <a name="environment"></a>Environment variables
-When starting the application, it will look for a file called application.properties. 
+When starting the application, it will look for a file called ```application.properties```. 
 If it exists it will read the environment variables from there.
 It is also possible to set enviroment variables through the command line.
 If custom environment variables are not specified, it will use default variables specified below.
@@ -52,7 +52,7 @@ spring.datasource.password=1234
 ```
 
 ## <a name="api"></a>API
-The API is accessable on port 5000 through two REST endpoints. 
+The API is accessable on port 5000 through two REST endpoints. One REST endpoint for executing the robot cleaning simulation and creating a report and one REST endpoint for getting the cleaning reports later. The url for the cleaning report will be found in the ```location``` header after executing the cleaning.
 
 ### Doing cleaning and creating a report
 #### Request example
