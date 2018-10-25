@@ -13,7 +13,7 @@ Cleaning results are stored in a Postgres database.
 
 ## How to get started
 ### Preperations
-Make sure you have Java sdk, Maven and Postgres installed.
+Make sure you have Java SDK, Maven and Postgres installed.
 For Mac OSX developers these tools can easily be installed using [Homebrew](https://brew.sh/).
 ```
 #> brew install java maven postgres
