@@ -57,6 +57,7 @@ The API is accessable on http, port 5000 through two REST endpoints. One REST en
 ### Doing cleaning and creating a report
 #### Request example
 ***POST*** ```http://localhost:5000/tibber-developer-test/enter-path```
+
 required headers:
 ```
 Content-Type: application/json
