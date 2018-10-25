@@ -58,7 +58,7 @@ spring.datasource.password=1234
 ```
 
 ## <a name="api"></a>API
-The API is accessable on http, port 5000 through two REST endpoints. One REST endpoint for executing the robot cleaning simulation and creating a report and one REST endpoint for getting the cleaning reports later. The url for the cleaning report will be found in the ```location``` header after executing the cleaning.
+The API is accessable on http, port 5000 through two REST endpoints. One REST endpoint for executing the robot cleaning simulation and creating a report and one REST endpoint for getting the cleaning reports later. The url for the cleaning report will be found in the ```location``` response header after executing cleaning.
 
 ### Doing cleaning and creating a report
 #### Request example
