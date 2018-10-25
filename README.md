@@ -25,7 +25,7 @@ Desclaimer: There may be other packages needed as well that I can't think of rig
 The executable jar file is built using Maven. The executable contains the application and a 
 Tomcat server where the application will be deplyed when run.
 ```
-#> mvn package.
+#> mvn package
 ```
 This will build the application, run all tests and package it into a executable jar file. 
 The application is run by issuing following command.
