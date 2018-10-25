@@ -106,7 +106,9 @@ body:
 ***GET*** ```http://localhost:5000/tibber-developer-test/enter-path/08520023-e28f-4964-84cd-af25ddc5cc3d```
 #### Response example
 response code:
-```200 OK```
+```
+200 OK
+```
 
 body:
 ```
