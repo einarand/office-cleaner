@@ -40,8 +40,8 @@ If it exists it will read the environment variables from there.
 It is also possible to set enviroment variables through the command line.
 If custom environment variables are not specified, it will use default variables specified below.
 
-Default Postgres setup harcoded in the application, but this can be overridden through the Environment.
-It is also possible to change the port that the web application listenes to.
+Default Postgres setup harcoded in the application, but this can be overridden through environment varibles (```spring.datasource``` name space).
+It is also possible to change the port that the web application listenes to through the variable ```server.port```.
 
 Default variables:
 ```
@@ -52,11 +52,11 @@ spring.datasource.password=1234
 ```
 
 ## <a name="api"></a>API
-The API is accessable on port 5000 through two REST endpoints. One REST endpoint for executing the robot cleaning simulation and creating a report and one REST endpoint for getting the cleaning reports later. The url for the cleaning report will be found in the ```location``` header after executing the cleaning.
+The API is accessable on http, port 5000 through two REST endpoints. One REST endpoint for executing the robot cleaning simulation and creating a report and one REST endpoint for getting the cleaning reports later. The url for the cleaning report will be found in the ```location``` header after executing the cleaning.
 
 ### Doing cleaning and creating a report
 #### Request example
-***POST*** ```localhost:5000/tibber-developer-test/enter-path```
+***POST*** ```http://localhost:5000/tibber-developer-test/enter-path```
 required headers:
 ```
 Content-Type: application/json
@@ -65,15 +65,15 @@ Content-Type: application/json
 request body example:
 ```
 {
-   "start":{
-       "x":5,
-       "y":2
-   },
-   "commands":[
-      {"direction":"north","steps":2},
-      {"direction":"east","steps":3}, 
-      {"direction":"south","steps":1}, 
-      {"direction":"west","steps":5},
+    "start":{
+         "x":5,
+         "y":2
+    },
+    "commands":[
+        {"direction":"north","steps":2},
+        {"direction":"east","steps":3}, 
+        {"direction":"south","steps":1}, 
+        {"direction":"west","steps":5},
    ]
 }
 ```
@@ -102,7 +102,7 @@ body:
 
 ### Getting reports from previous cleanings
 #### Request example
-***GET*** ```localhost:5000/tibber-developer-test/enter-path/08520023-e28f-4964-84cd-af25ddc5cc3d```
+***GET*** ```http://localhost:5000/tibber-developer-test/enter-path/08520023-e28f-4964-84cd-af25ddc5cc3d```
 #### Response example
 response code:
 ```200 OK```
