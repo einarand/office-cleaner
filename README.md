@@ -79,7 +79,7 @@ body:
         {"direction":"north","steps":2},
         {"direction":"east","steps":3}, 
         {"direction":"south","steps":1}, 
-        {"direction":"west","steps":5},
+        {"direction":"west","steps":5}
    ]
 }
 ```
